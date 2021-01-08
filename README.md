@@ -22,7 +22,7 @@ Variables
 - Name (owner)
 - Book_list
 Methods:
-- add_book(book): adds a book to the lsit
+- add_book(book): adds a book to the list
 - get_books(): returns the list of books in the library
 ```
 
