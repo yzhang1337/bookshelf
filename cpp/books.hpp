@@ -52,7 +52,7 @@ public:
   void add_book(Book b) { books.push_back(b); }
   std::string get_owner() { return owner; }
   std::vector<std::string> get_titles();
-  Book get_loan(std::string title);
+  Book get_loan(const std::string &title);
 };
 
 std::vector<std::string> Shelf::get_titles() {
@@ -63,7 +63,7 @@ std::vector<std::string> Shelf::get_titles() {
   return titles;
 }
 
-Book Shelf::get_loan(std::string title) {
+Book Shelf::get_loan(const std::string &title) {
   // return the book to be loaned, move it to the loaned_books
   int book_loc;
   bool book_found = false;
