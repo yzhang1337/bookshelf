@@ -24,20 +24,6 @@ def home():
     )
 
 
-@app.route('/api/zach', methods=['GET'])
-def api_zach():
-    return (
-        "zach's info"
-    )
-
-
-@app.route('/login', methods=['POST'])
-def login():
-    user = request.form["user"]
-    print(user)
-    return user
-
-
 @app.route('/register', methods=['POST'])
 def register():
     # Add a new user to the user_data dictionary
