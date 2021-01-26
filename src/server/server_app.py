@@ -42,11 +42,15 @@ def login():
 def register():
     # Add a new user to the user_data dictionary
 
+    # Get the user and password from the request data that we sent. Data is
+    # stored in the "form" variable.
     user = request.form['user']
     passwd = request.form['password']
 
     if user in user_data:
         return "User already exists"
+
+    # Create the user in the user_data dictionary.
     user_data[user] = {
         "password": passwd,
         "book_list": [],

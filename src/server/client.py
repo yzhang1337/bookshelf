@@ -14,6 +14,8 @@ def register_user(name, passwd):
     # Add a user to the server
 
     func_url = url + "register"
+    # Package the username and password into a dictionary, to send to the
+    # server.
     login = {"user": name, "password": passwd}
     resp = requests.post(func_url, data=login)
     print(resp.text)
